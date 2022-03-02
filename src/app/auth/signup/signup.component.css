@@ -14,6 +14,7 @@ select{
     background: #fff;
     height: 30px;
     border: black;
+    margin-bottom: 20px;
 }
 .toggle-btn
 {
@@ -37,3 +38,32 @@ select{
     border-radius: 30px;
     transition: .5s;
 }
+
+ .signup-header{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 37px;
+    font-weight: 15px;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+input{
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid black;
+    outline: none;
+    background-color: rgb(250, 250, 250);
+}
+   
+.card{
+    background-color: rgb(250, 250, 250);
+    margin-left: 75%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.form-control:focus {
+    box-shadow: none;
+} 
