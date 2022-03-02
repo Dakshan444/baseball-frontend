@@ -1,0 +1,4 @@
+dotnet-ef dbcontext scaffold "Server=DESKTOP-LS5R3C6\SQLEXPRESS;Database=baseball_t;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -o Model -f
+
+
+Image Link

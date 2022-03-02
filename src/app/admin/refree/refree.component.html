@@ -1,0 +1,50 @@
+<!-- 
+
+<table class="table table-striped">
+    <thead>
+      
+        
+        <th>Refree ID</th>
+        <th>Refree Name</th>
+        <th>Refree Experience</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of refree;let i = index">
+            <td>{{s.refreeId}}</td>
+            <td>{{s.refereeName}}</td>
+            <td>{{s.noOfMatches}}</td>
+            
+              <td><button type="button" routerLink="../editRefree" class="btn btn-primary" (click)="ToUpdate(i)">
+                Edit
+              </button></td>
+            <td><button class="btn btn-danger" (click)="delete(i)"routerLink="../deleteRefree">Delete</button></td>
+            
+        </tr>
+        
+    </tbody>
+</table> -->
+<!-- <app-add-refree></app-add-refree> -->
+<!-- <button routerLink="../addRefree" class="align-item-center btn btn-primary">ADD Refree</button>-->
+<div class="container "> 
+    <div class="row rwo-cols-1 row-cols-md-3 g-4">
+        <div class="col"*ngFor="let s of refree;let i = index"  >
+
+            <div class="card h-100 "  id="umpireGrid{{i}}" style="width: 20rem;border-radius: 10px;" >
+                <img src="" style="height: 15rem;border-radius: 10px;" class="card-img-top " alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{s.refereeName}}</h5>
+                    <!-- <div class="d-flex"> -->
+                         <div class="clearfix row-cols-1">
+                        <p class="card-text mx-4">Experience: {{s.noOfMatches}}</p>
+                        <button type="button" routerLink="../editRefree"  (click)="ToUpdate(i)" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></button>
+                        <a class="btn btn-sm btn-danger" routerLink="../deleteRefree" id="deleteAmpire" data-bs-toggle="modal" data-bs-target="#exampleModal"(click)="delete(i)"><i class="fas fa-trash"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="position-absolute" style="bottom: 0;right: 0;">
+    <button class="btn btn-primary" routerLink="../addRefree" id="addRefreeButton">ADD Refree</button>
+  </div>
+  </div>
