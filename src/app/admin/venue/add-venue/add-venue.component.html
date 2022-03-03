@@ -1,5 +1,23 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.form-floating{
+    margin-bottom: 10px;
+}
+
+label{
+    margin-left: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.container{
+    margin-bottom: 50px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
 </style> 
 
 <div class="mt-5 mask d-flex align-items-center h-100 gradient-custom-3">
@@ -8,53 +26,46 @@
             <div class="col-12 col-md-12 col-lg-10 col-xl-6">
                 <div class="card" style="border-radius: 15px;">
                     <div class="card-body p-5">
-                        <h2 class="text-center mb-3" style="font-family: 'Lobster', cursive;">Add New Venue</h2>
-        <form style="width: fit-content; margin-top: 30px;" [formGroup]="AddForm"  (ngSubmit)="addVenue()">
-            <div class=" row ">
-                
-                <div class="col-sm-9 form-floating ">
-                    <input type="text" class="form-control" id="venueId" placeholder="Enter Venue ID" formControlName="_VenueId" >
-                    <label for="venueId" >VenueId</label>
-                </div>
-                
-                <div class="col-sm-9 form-floating">
-                    <input type="text" class="form-control" id="venueName" placeholder="Enter Venue Name" formControlName="_VenueName" >
-                    <label for="venueName">Venue Name</label>
-                </div>
-                
-                <div class="col-sm-9 form-floating">
-                    <input type="text" class="form-control" id="imageUrl" placeholder="Enter image URL" formControlName="_VenueImageUrl" >
-                    <label for="imageUrl">Image Url</label>
-                </div>
-                
-                <div class="col-sm-9 form-floating">
-                    <input type="text" class="form-control" id="venueDescription" placeholder="Enter Venue Description" formControlName="_VenueDescription" >
-                    <label for="venueDescription">Description</label>
-                </div>
-                
-                <div class="col-sm-9 form-floating">
-                    <input type="text" class="form-control" id="capacityOfVenue" placeholder="Enter Venue Capacity" formControlName="_VenueLocation" >
-                    <label for="capacityOfVenue" >Capacity</label>
-                </div>
-                
-                <div class=" form-floating">
-                    <input type="text" class="form-control" id="venueLocation" placeholder="Enter Venue location" formControlName="_VenueLocation" >
-                    <label for="venueLocation">Venue Location</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floating" placeholder="name@example.com">
-                    <label for="floating">Email address</label>
-                  </div>
-                <div class="btn-group mt-4"> 
-                    <button class="btn btn-danger " style="margin-right: 5px;">Cancel</button>
-                <button class="btn btn-primary float-right" type="submit" id="addVenue" >Add Venue</button>
-           
-                </div>
-            </div>
-        </form>
-        
+                        <h2 class="text-center mb-3">Add New Venue</h2>
+                        <form style="width: fit-content; margin-top: 30px;" [formGroup]="AddForm"  (ngSubmit)="addVenue()">
+                            <div class="form-group row ">
+                                
+                                <div class="form-floating ">
+                                    <input type="text" class="form-control" id="venueId" placeholder="Enter Venue ID" formControlName="_VenueId" >
+                                    <label for="venueId" >VenueId</label>
+                                </div>
+                                
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="venueName" placeholder="Enter Venue Name" formControlName="_VenueName" >
+                                    <label for="venueName">Venue Name</label>
+                                </div>
+                                
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="imageUrl" placeholder="Enter image URL" formControlName="_VenueImageUrl" >
+                                    <label for="imageUrl">Image Url</label>
+                                </div>
+                                
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="venueDescription" placeholder="Enter Venue Description" formControlName="_VenueDescription" >
+                                    <label for="venueDescription">Description</label>
+                                </div>
+                                
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="capacityOfVenue" placeholder="Enter Venue Capacity" formControlName="_VenueLocation" >
+                                    <label for="capacityOfVenue" >Capacity</label>
+                                </div>
+                                
+                                <div class=" form-floating">
+                                    <input type="text" class="form-control" id="venueLocation" placeholder="Enter Venue location" formControlName="_VenueLocation" >
+                                    <label for="venueLocation">Venue Location</label>
+                                </div>
+                                <div class="btn-group mt-4"> 
+                                    <button class="btn btn-danger " style="margin-right: 5px;">Cancel</button>
+                                    <button class="btn btn-primary float-right" type="submit" id="addVenue" >Add Venue</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-
                 </div>
             </div>
         </div>    

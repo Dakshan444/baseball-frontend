@@ -7,7 +7,7 @@ import { VenueserviceService } from '../venueservice.service';
 @Component({
     selector: 'app-add-venue',
     templateUrl: './add-venue.component.html',
-    styles: ['./add-venue.component.css']
+    styles: []
 })
 export class AddVenueComponent implements OnInit {
     AddForm!: FormGroup;
@@ -18,10 +18,10 @@ export class AddVenueComponent implements OnInit {
         this.AddForm=new FormGroup(
             {
                 _VenueId: new FormControl(null,Validators.required),
-      _VenueName:new FormControl(null,Validators.required),
-      _VenueImageUrl:new FormControl(null,Validators.required),
-      _VenueDescription:new FormControl(null,Validators.required),
-      _VenueLocation: new FormControl(null,Validators.required)
+                _VenueName:new FormControl(null,Validators.required),
+                _VenueImageUrl:new FormControl(null,Validators.required),
+                _VenueDescription:new FormControl(null,Validators.required),
+                _VenueLocation: new FormControl(null,Validators.required)
             }
         );
 
