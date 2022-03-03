@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+h2{
+    font-family: 'Lobster', cursive;
+}
+
+.form-floating{
+    margin-bottom: 10px;
+}
+div{
+    color: aqua;
+    margin: 10px;
+}
