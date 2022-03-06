@@ -2,6 +2,22 @@
   .form-control:focus {
     box-shadow: none;
   }
+  .container{
+    position: relative;
+    height: 100px;
+  }
+
+  tbody{
+    overflow-y:scroll; 
+    height:50%;
+  }
+  th{
+    padding: 20px 0px;
+    text-align: center;
+  }
+  td{
+    text-align: center;
+  }
 </style>
 <body style="background-image: url('https://www.pixelstalk.net/wp-content/uploads/2016/12/Baseball-Stadium-HD-Wallpaper.jpg');position: absolute; width: 100%; height: 100%;">
 
@@ -11,6 +27,8 @@
       <th>Venue Name</th>
       <th>Time</th>
       <th>Date</th>
+      <th></th>
+      <th></th>
     </thead>
     <tbody>
       <tr *ngFor="let s of bookList;let i=index">

@@ -11,7 +11,7 @@ import { UserModel } from '../shared/user.model';
 export class AuthenticationService {
 
   constructor(private http:HttpClient, public route:Router) { }
-API='https://localhost:5001/';
+API='https://localhost:44359/';
 
 //Login check For Customer
 LoginCheck(_email:string,_password:string):Observable<ResponseModel>{

@@ -7,7 +7,7 @@ import { VenueserviceService } from '../venueservice.service';
 @Component({
     selector: 'app-add-venue',
     templateUrl: './add-venue.component.html',
-    styles: []
+    styleUrls: []
 })
 export class AddVenueComponent implements OnInit {
     AddForm!: FormGroup;

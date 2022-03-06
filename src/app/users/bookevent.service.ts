@@ -7,7 +7,7 @@ import { BookingDetails } from 'src/app/shared/bookingdetails.model';
   providedIn: 'root'
 })
 export class BookeventService {
-readonly API="https://localhost:5001/api/EventBooking/"
+readonly API="https://localhost:44359/api/EventBooking/"
   constructor(private http: HttpClient) { }
   addBooking(body:BookingDetails):Observable<BookingDetails>{
     let Url=this.API+'bookEvent/';
