@@ -16,3 +16,11 @@
     margin: 20px 0px;
     padding: 20px;
   }
+
+.search-bar{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

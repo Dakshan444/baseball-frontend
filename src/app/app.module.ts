@@ -35,6 +35,7 @@ import { EditBookingComponent } from './users/bookevent/edit-booking/edit-bookin
 import { AuthComponent } from './auth/auth.component';
 import { DeleteUserComponent } from './admin/displayuser/delete-user/delete-user.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

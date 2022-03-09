@@ -6,7 +6,7 @@ import { VenueserviceService } from '../venueservice.service';
 @Component({
   selector: 'app-view-venue',
   templateUrl: './view-venue.component.html',
-  styles: [
+  styles: [ 
   ]
 })
 export class ViewVenueComponent implements OnInit {

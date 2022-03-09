@@ -7,7 +7,7 @@ import { VenueModel } from 'src/app/shared/venue.model';
   providedIn: 'root'
 })
 export class ViewEventService {
-readonly APIUrl="https://localhost:5001/api/Venue/"
+readonly APIUrl="https://localhost:44359/api/Venue/"
   constructor(private http:HttpClient) { }
   getVenue():Observable<VenueModel[]>
   {

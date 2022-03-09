@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <div class="row">
         <div class="col-6 col-md-4 col-lg-3 mb-4">
 
@@ -79,16 +79,58 @@
         </div>
         </div>
     </div>
-</div>
+</div> -->
+<style>
+    .card{
+    width: 300px; 
+    min-width: 200px;
+  }
+  .card-center{
+        
+    margin: 10px 0px;
+    position: relative;
+    display: grid;
+    justify-content: center
+  }
+  .amountWhite{
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 48px;
+    margin: 20px 0px;
+    padding: 20px;
+  }
+
+.search-bar{
+  width: 40%;
+  margin-left: 30%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.form-control:focus, .btn:focus {
+    box-shadow: none;
+  }
+</style>
+<div class="input-group search-bar">
+    <input type="search" id="form1" class="form-control" ng-model="searchValue">
+    <button type="button" class="btn btn-primary">
+      <i class="fas fa-search"></i>
+    </button>
+</div> 
 <div class="container mt-4">
+    
     <div class="row">
-        <div class="col-6 col-md-4 col-lg-3 mb-4"*ngFor="let s of venues;let i = index"  >
+        <!-- <div class="col-6 col-md-4 col-lg-3 mb-4" *ngFor="let s of venues;let i = index; | filter:searchValue"  > -->
+            <div class="col-6 col-md-4 col-lg-3 mb-4" *ngFor="let s of venues"  >
+        <!-- <div class="col-6 col-md-4 col-lg-3 mb-4" ng-repeat="s of venues | filter:searchValue"  > -->
             <div class="card " id="eventGrid1" style="border-radius: 10px; " >
                 <img src="{{s.venueImageUrl}}" style="height: 15rem;border-radius: 10px;" class="card-img-top " alt="...">
                 <div class="card-body">
                     <h5 class="card-title text-center">{{s.venueName}}</h5>
                     <div class="d-flex">
-                        <p class="card-text mx-4">Place: {{s.venueDescription}}</p>
+                        <p class="card-text mx-4">Place: {{s.venueLocation}}</p>
                     </div>
                 </div>
             </div>

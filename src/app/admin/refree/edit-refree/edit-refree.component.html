@@ -11,23 +11,26 @@
                         <h2 class="text-center mb-3">Edit Refree</h2>
                         <form style="width: fit-content; margin-top: 30px;" [formGroup]="EditForm" (ngSubmit)="editRefree()">
                             <div class="form-group row ">
-                                <label for="" class="col-sm-3 col-form-label">RefreeId</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control" formControlName="_refreeId">
+                                
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="refreeId" formControlName="_refreeId" placeholder="">
+                                    <label for="refreeId" class="col-sm-3 col-form-label">RefreeId</label>
                                 </div>
-                                <label for="" class="col-sm-3 col-form-label">Refree Name</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control" formControlName="_refreeName">
+                                
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="refreeName" formControlName="_refreeName" placeholder="">
+                                    <label for="refreeName" class="col-sm-3 col-form-label">Refree Name</label>
                                 </div>
-                                <label for="" class="col-sm-3 col-form-label">No Of Matches</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control" formControlName="_noOfMatches">
+                                
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="noOfMatchs" formControlName="_noOfMatches" placeholder="">
+                                    <label for="noOfMatchs" class="col-sm-3 col-form-label">No Of Matches</label>
                                 </div>
                                 <div class="btn-group mt-4">
-                                <button class="btn btn-danger" style="margin-right: 5px;">Cancel</button>
-                                <button class="btn btn-primary float-right" type="submit">Edit</button>
+                                    <button class="btn btn-danger" style="margin-right: 5px;">Cancel</button>
+                                    <button class="btn btn-primary float-right" type="submit">Edit</button>
+                                </div>
                             </div>
-                        </div>
                         </form>
                     </div>
                 </div>

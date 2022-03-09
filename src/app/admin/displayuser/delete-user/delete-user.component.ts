@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+ import { Component, OnInit } from '@angular/core';
 import { UserModel } from 'src/app/shared/user.model';
 import { ServicedService } from '../serviced.service';
 

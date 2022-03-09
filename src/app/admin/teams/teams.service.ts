@@ -8,12 +8,12 @@ import { TeamModel } from './team.model';
 })
 export class TeamsService {
 // teams!:TeamModel[];
-readonly APIUrl = "https://localhost:5001/api/Team/"
+readonly APIUrl = "https://localhost:44359/api/Team/"
   constructor(private http:HttpClient) { }
   getTeams():Observable<TeamModel[]>
   {
     
-return this.http.get<TeamModel[]>("https://localhost:5001/api/Team/getTeam")
+return this.http.get<TeamModel[]>("https://localhost:44359/api/Team/getTeam")
   }
   edit!:TeamModel;
   editTeam(params:number,body:TeamModel):Observable<TeamModel>

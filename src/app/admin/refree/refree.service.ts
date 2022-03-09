@@ -7,7 +7,7 @@ import { RefereeModel} from './referee.model';
   providedIn: 'root'
 })
 export class RefreeService {
-readonly ApIUrl="https://localhost:5001/api/Refree/"
+readonly ApIUrl="https://localhost:44359/api/Refree/"
 
   constructor(private http: HttpClient) { }
 

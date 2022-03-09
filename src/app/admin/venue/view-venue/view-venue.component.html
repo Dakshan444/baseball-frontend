@@ -35,18 +35,19 @@
         <div class="card-body">
           <h5 class="card-title text-center">{{s.venueName}}</h5>
           <!-- <div class="d-flex"> -->
-          <div class="clearfix row-cols-1">
             <p class="card-text ">Place: {{s.venueLocation}}</p>
+          <div class="btn-group d-flex">
+            
             <button type="button" id="editVenue" (click)="ToUpdate(i)" id="editVenue"
-              class="btn btn-sm btn-primary float-right "><i class="fas fa-edit"></i></button>
+              class="btn btn-sm btn-primary float-right" style="width: 120px; margin-right: 5px;"><i class="fas fa-edit"></i></button>
             <button class="btn btn-sm btn-danger float-right" data-bs-toggle="modal" id="deleteVenue"
-              data-bs-target="#exampleModal" (click)="delete(i)"><i class="fas fa-trash"></i></button>
+              data-bs-target="#exampleModal" (click)="delete(i)" style="width: 120px;"><i class="fas fa-trash"></i></button>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="position-absolute" style="bottom: 0;right: 0;">
+  <div  style="position:fixed;bottom:10px;right: 10px;">
     <button class="btn btn-primary" routerLink="../addVenue" id="addVenue">AddVenue</button>
   </div>
 </div>
