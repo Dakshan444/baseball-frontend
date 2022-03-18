@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 import { BehaviorSubject, Observable } from 'rxjs';
 import { AdminResponseModel, ResponseModel } from '../shared/ResponseModel';
 import { UserModel } from '../shared/user.model';
@@ -19,11 +20,19 @@ export class AuthenticationService {
     // this.currentUser=this.currentUserSubject.asObservable();
   }
   API='https://localhost:44359/';
-
+  email:string="";
 //Login check For Customer
-LoginCheck(_email:string,_password:string):Observable<ResponseModel>{
+
+   //~~~~~~~~~~~~~~~~~~!!!!!!!!!!!!!!!!!!!!~~~~~~~~~~~~~~~
+   getUserEmail(_email:string){
+         this.email= _email;
+   };
+   //~~~~~~~~~~~~~~~~~~!!!!!!!!!!!!!!!!!!!!!!~~~~~~~~~~
+  
+   LoginCheck(_email:string,_password:string):Observable<ResponseModel>{
   let Url=this.API+'user/login';
   const body={email: _email, password: _password};
+  // loginUser=_email;
   
   return this.http.post<ResponseModel>(Url,body);
   // .pipe(map(userInfo=>{

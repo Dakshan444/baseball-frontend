@@ -36,6 +36,7 @@ import { AuthComponent } from './auth/auth.component';
 import { DeleteUserComponent } from './admin/displayuser/delete-user/delete-user.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,11 +65,8 @@ import { DeleteUserComponent } from './admin/displayuser/delete-user/delete-user
     ViewbookedEventComponent,
     EditBookingComponent,
     AuthComponent,
-    DeleteUserComponent
+    DeleteUserComponent,
   
-    
-    
-    
   ],
   imports: [
     BrowserModule,

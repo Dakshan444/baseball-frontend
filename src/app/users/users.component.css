@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display&family=Roboto:ital,wght@0,500;1,900&display=swap');
 
 .navbar{
-   margin-bottom: 0;
+   /* margin-bottom: 0; */
    background-color: black;
    border-bottom: 0.8px solid rgb(34, 34, 34);
 }

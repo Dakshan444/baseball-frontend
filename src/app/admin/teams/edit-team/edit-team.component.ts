@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { NotificationService } from 'src/app/notification-service.service';
 import { TeamModel } from '../team.model';
 import { TeamsService } from '../teams.service';
+import {ToastrService} from 'node_modules/ngx-toastr'
 
 @Component({
   selector: 'app-edit-team',
@@ -13,7 +14,7 @@ import { TeamsService } from '../teams.service';
 export class EditTeamComponent implements OnInit {
 editValue!: TeamModel;
 TeamForm!:FormGroup;
-  constructor(private service:TeamsService, private route:Router, private notify:NotificationService) { }
+  constructor(private service:TeamsService, private route:Router, private notify:NotificationService,private toastr:ToastrService) { }
 
   ngOnInit(): void {
     this.editValue=this.service.edit;
@@ -48,7 +49,7 @@ TeamForm!:FormGroup;
         this.route.navigate(['admin/teams']);
       })
     })
-    this.notify.showSuccess("","Team Edited Successfully");
+    this.toastr.success("Team Details edited successfuly","Edit Team Details");
   }
 
 }
