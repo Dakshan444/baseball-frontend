@@ -30,7 +30,7 @@ export class AddVenueComponent implements OnInit {
     addVenue() {
         const body: VenueModel = {
             venueId: this.AddForm?.get('_VenueId')?.value,
-            venueName: this.AddForm?.get('_VenueLocation')?.value,
+            venueName: this.AddForm?.get('_VenueName')?.value,
             venueImageUrl: this.AddForm?.get('_VenueImageUrl')?.value,
             venueDescription: this.AddForm?.get('_VenueDescription')?.value,
             venueLocation: this.AddForm?.get('_VenueLocation')?.value,

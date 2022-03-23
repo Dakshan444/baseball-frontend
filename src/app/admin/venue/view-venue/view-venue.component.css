@@ -9,3 +9,17 @@
     height: 15vw;
     object-fit: cover;
 }
+
+.search-bar{
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form-control:focus, .btn:focus {
+    box-shadow: none;
+}

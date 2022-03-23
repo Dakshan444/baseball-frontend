@@ -23,6 +23,7 @@ import { UsersComponent } from "./users/users.component";
 import { BookeventComponent } from "./users/bookevent/bookevent.component";
 import { ViewbookedEventComponent } from "./users/viewbooked-event/viewbooked-event.component";
 import { EditBookingComponent } from "./users/bookevent/edit-booking/edit-booking.component";
+
 const appRoutes: Routes = [
     { path: "", redirectTo: "/login", pathMatch: 'full' },
     { path: "login", component: LoginComponent },

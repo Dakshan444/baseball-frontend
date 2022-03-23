@@ -33,33 +33,7 @@ export class ViewbookedEventComponent implements OnInit {
       // console.log(this.bookLists);
     })
   }
-  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  // getdetails(){
-  //   this.service.getbooking().subscribe(data=>{
-  //     data.forEach(function(detail){
-  //       if(detail.applicantEmail==email){
-  //         booking[0]=detail;
-  //       }
-  //     })
-  //     this.bookList=data;
-  //     // console.log(this.bookLists);
-  //   })
-  //   let email=this.auth.email;
-  //     console.log(email);
-  //     this.bookLists.forEach(function(detail) {
-        
-  //       // console.log("1111111111111111");
-  //       if(detail.applicantEmail==email){
-  //         // this.bookList.push(detail);
-  //         // bookList[0]=detail;
-          
-  //         console.log(detail);
-  //       }
-  //     });
-  // }
-  //~~~~~~~~~~~~~~~~~~~!!!!!!!!!!!!!!!!!!!!!!!!!~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
+  
   delete(index:number)
   {
     let temp=this.bookList[index].bookingId

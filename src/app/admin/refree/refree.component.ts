@@ -9,7 +9,8 @@ import { RefreeService } from './refree.service';
   ]
 })
 export class RefreeComponent implements OnInit {
-refree!:RefereeModel[];
+refrees!:RefereeModel[];
+searchString:string='';
   constructor(private service:RefreeService) { }
 
   ngOnInit(): void {
@@ -18,18 +19,18 @@ refree!:RefereeModel[];
   }
   getReferee(){
     this.service.getRefree().subscribe(data=>{
-      this.refree=data;
+      this.refrees=data;
       
     })
   }
   ToUpdate(index:number)
   {
-    this.service.editrefree=this.refree[index];
+    this.service.editrefree=this.refrees[index];
 
   }
   delete(index:number)
   {
-    this.service.deleteref=this.refree[index];
+    this.service.deleteref=this.refrees[index];
 
   }
 

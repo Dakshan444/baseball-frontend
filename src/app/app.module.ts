@@ -34,6 +34,10 @@ import { ViewbookedEventComponent } from './users/viewbooked-event/viewbooked-ev
 import { EditBookingComponent } from './users/bookevent/edit-booking/edit-booking.component';
 import { AuthComponent } from './auth/auth.component';
 import { DeleteUserComponent } from './admin/displayuser/delete-user/delete-user.component';
+import { SeachFilterPipe } from './users/view-event/seach-filter.pipe';
+import { VenueSearchPipe } from './admin/venue/view-venue/venue-search.pipe';
+import { TeamSearchPipe } from './admin/teams/team-search.pipe';
+import { RefreeSearchPipe } from './admin/refree/refree-search.pipe';
 
 
 
@@ -66,6 +70,10 @@ import { DeleteUserComponent } from './admin/displayuser/delete-user/delete-user
     EditBookingComponent,
     AuthComponent,
     DeleteUserComponent,
+    SeachFilterPipe,
+    VenueSearchPipe,
+    TeamSearchPipe,
+    RefreeSearchPipe,
   
   ],
   imports: [

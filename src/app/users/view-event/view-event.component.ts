@@ -11,7 +11,7 @@ import { ViewEventService } from './view-event.service';
 })
 export class ViewEventComponent implements OnInit {
     venues!: VenueModel[];
-    
+    searchString: string='';
     constructor(private service: ViewEventService) { }
 
     ngOnInit(): void {

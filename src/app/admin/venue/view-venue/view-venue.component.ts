@@ -13,7 +13,8 @@ export class ViewVenueComponent implements OnInit {
 
   venues!: any[];
   Venues!: VenueModel[];
-  venueIdd!: number
+  venueIdd!: number;
+  searchString: string='';
   constructor(private service: VenueserviceService, private route: Router, private router: ActivatedRoute) { }
 
   ngOnInit(): void {

@@ -10,6 +10,7 @@ import { TeamsService } from './teams.service';
 })
 export class TeamsComponent implements OnInit {
 teams!:TeamModel[];
+searchString:string='';
   constructor(private service :TeamsService, private route: Router) { }
 
   ngOnInit(): void {
