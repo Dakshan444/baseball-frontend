@@ -5,6 +5,8 @@ import { NotificationService } from 'src/app/notification-service.service';
 import { TeamModel } from '../team.model';
 import { TeamsService } from '../teams.service';
 import {ToastrService} from 'node_modules/ngx-toastr'
+import { PlayerModel } from '../player.model';
+import { ServicesService } from 'src/app/services.service';
 
 @Component({
   selector: 'app-edit-team',
@@ -13,8 +15,11 @@ import {ToastrService} from 'node_modules/ngx-toastr'
 })
 export class EditTeamComponent implements OnInit {
 editValue!: TeamModel;
+PlayerList!:PlayerModel[];
 TeamForm!:FormGroup;
-  constructor(private service:TeamsService, private route:Router, private notify:NotificationService,private toastr:ToastrService) { }
+  constructor(private service:TeamsService, private route:Router, private notify:NotificationService,private toastr:ToastrService) {
+    
+   }
 
   ngOnInit(): void {
     this.editValue=this.service.edit;
@@ -28,7 +33,8 @@ TeamForm!:FormGroup;
         _TeamPlayers: new FormControl(this.editValue.noOfPlayers,Validators.required)
       }
     );
-    console.log(this.editValue);
+    // console.log(this.editValue);
+    this.getdetails();
   }
   updateTeams()
   {
@@ -41,15 +47,33 @@ TeamForm!:FormGroup;
       location:this.TeamForm?.get('_TeamLocation')?.value
     }
     let params=this.editValue.teamId;
+    // console.log(params); 
     this.service.editTeam(params,body).subscribe(x=>{
-      console.log(body);
-     
-
+      // console.log(body);
       setTimeout(()=>{
         this.route.navigate(['admin/teams']);
       })
     })
+    
+    
     this.toastr.success("Team Details edited successfuly","Edit Team Details");
+  }
+  
+  // getdetails(){
+  //   let params=this.editValue.teamId;
+  //   this.service.getPlayers(params).subscribe(data=>{
+  //     this.PlayerList=data;
+  //   // console.log(data);
+  //   })
+  // }
+
+  getdetails(){
+    let params=this.editValue.teamId;
+    this.service.getPlayers(params).subscribe(data=>{
+      this.PlayerList=data;
+    // console.log(data);
+      // console.log(this.PlayerList)
+    })
   }
 
 }

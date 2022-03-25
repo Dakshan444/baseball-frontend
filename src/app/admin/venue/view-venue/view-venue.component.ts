@@ -40,18 +40,15 @@ export class ViewVenueComponent implements OnInit {
   }
   deletethis() {
     let params = this.venueIdd;
-    console.log(params);
+    // console.log(params);
     this.service.deleteVenue(params).subscribe(x => {
 
-      console.log(x);
-
+      // console.log(x);
+      
     });
     setTimeout(() => {
       this.route.navigate(["admin/view"]);
     }, 100);
-
-
-
   }
 
 }

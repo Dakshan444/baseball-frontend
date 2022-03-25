@@ -38,6 +38,8 @@ import { SeachFilterPipe } from './users/view-event/seach-filter.pipe';
 import { VenueSearchPipe } from './admin/venue/view-venue/venue-search.pipe';
 import { TeamSearchPipe } from './admin/teams/team-search.pipe';
 import { RefreeSearchPipe } from './admin/refree/refree-search.pipe';
+import { AddPlayerComponent } from './admin/teams/add-player/add-player.component';
+import { DisplayPlayerComponent } from './admin/teams/display-player/display-player.component';
 
 
 
@@ -74,6 +76,8 @@ import { RefreeSearchPipe } from './admin/refree/refree-search.pipe';
     VenueSearchPipe,
     TeamSearchPipe,
     RefreeSearchPipe,
+    AddPlayerComponent,
+    DisplayPlayerComponent,
   
   ],
   imports: [
